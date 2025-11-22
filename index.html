@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Security Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔒 Security Dashboard</h1>
+
+    <div class="controls">
+      <label>Load JSON:
+        <input type="file" id="fileInput" accept=".json" />
+      </label>
+      <button id="loadSample">Load Sample</button>
+    </div>
+
+    <div id="summary" class="summary-cards"></div>
+
+    <div class="charts">
+      <div class="chart-card">
+        <h3>Port Status (Open/Closed sample)</h3>
+        <canvas id="portChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Status Classes</h3>
+        <canvas id="statusChart"></canvas>
+      </div>
+    </div>
+
+    <div class="raw">
+      <h3>Raw JSON (first 5000 chars)</h3>
+      <pre id="rawJson"></pre>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
